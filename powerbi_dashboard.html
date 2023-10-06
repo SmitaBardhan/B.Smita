@@ -1,0 +1,856 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MQZQP1MWPH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MQZQP1MWPH');
+</script>
+    <title>Microsoft Power BI</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge;" />
+    <base href="/">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="images/PowerBI_Favicon.ico" />
+
+    <script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {}; this.parseTimeMarkers['es6-promise.min.js'] = { nominalStart: Date.now(), start: Date.now(), initial: true }; </script>
+<script type="text/javascript" src="https://content.powerapps.com/resource/powerbiwfe/scripts/es6-promise.min.adf8c9fffd201e9cf42f.js"  nomodule  onerror=cdnFallback(event) ></script>
+<script type="text/javascript">this.parseTimeMarkers['es6-promise.min.js'].end = Date.now();</script>
+
+    <script>    
+        var powerBIAccessToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyIsImtpZCI6Ii1LSTNROW5OUjdiUm9meG1lWm9YcWJIWkdldyJ9.eyJhdWQiOiJodHRwczovL2FuYWx5c2lzLndpbmRvd3MubmV0L3Bvd2VyYmkvYXBpIiwiaXNzIjoiaHR0cHM6Ly9zdHMud2luZG93cy5uZXQvNmM0ZjRmZjItOGIwMi00MmVmLTg0NWEtMGNiMDU4ZjcwMzk2LyIsImlhdCI6MTY5NjU4Mjg5NiwibmJmIjoxNjk2NTgyODk2LCJleHAiOjE2OTY1ODgzNTMsImFjY3QiOjAsImFjciI6IjEiLCJhaW8iOiJBVFFBeS84VUFBQUFXMUVUdDUxNHZVdXI3NklNeFM0VzZXWENBQnlWYVhycUNack9sV0w0eDdhQXFTYXJjMCtkMFlEdUJPcEU5aWZYIiwiYW1yIjpbInB3ZCJdLCJhcHBpZCI6Ijg3MWMwMTBmLTVlNjEtNGZiMS04M2FjLTk4NjEwYTdlOTExMCIsImFwcGlkYWNyIjoiMiIsImZhbWlseV9uYW1lIjoiQmFyZGhhbiIsImdpdmVuX25hbWUiOiJTbWl0YSIsImlwYWRkciI6IjI0MDE6NDkwMDoxYzMwOjFlZmI6MTU4OjkzOWY6ZDA2YzpkYTg4IiwibmFtZSI6IlNtaXRhIEJhcmRoYW4iLCJvaWQiOiJiNmU4YmYxOC1mNmYwLTQ2ODAtYWEzNS1kYzE3ZGYwZWY1YmYiLCJwdWlkIjoiMTAwMzIwMDJBREU4NzZGNyIsInJoIjoiMC5BVW9BOGs5UGJBS0w3MEtFV2d5d1dQY0RsZ2tBQUFBQUFBQUF3QUFBQUFBQUFBQ0pBRzQuIiwic2NwIjoidXNlcl9pbXBlcnNvbmF0aW9uIiwic2lnbmluX3N0YXRlIjpbImttc2kiXSwic3ViIjoiTmhGUHppUC1FeTZ4eDJBcGdfcVFJTjJremF5eGZTLWZoeF9VOU1iYXFhMCIsInRpZCI6IjZjNGY0ZmYyLThiMDItNDJlZi04NDVhLTBjYjA1OGY3MDM5NiIsInVuaXF1ZV9uYW1lIjoic21pdGEuYmFyZGhhbkBlaXN0dWR5Lm9ubWljcm9zb2Z0LmNvbSIsInVwbiI6InNtaXRhLmJhcmRoYW5AZWlzdHVkeS5vbm1pY3Jvc29mdC5jb20iLCJ1dGkiOiJJY1FQYk5CUVMwaWhyQlFlUXNKWUFBIiwidmVyIjoiMS4wIiwid2lkcyI6WyJmZTkzMGJlNy01ZTYyLTQ3ZGItOTFhZi05OGMzYTQ5YTM4YjEiLCI2OTA5MTI0Ni0yMGU4LTRhNTYtYWE0ZC0wNjYwNzViMmE3YTgiLCJmMjhhMWY1MC1mNmU3LTQ1NzEtODE4Yi02YTEyZjJhZjZiNmMiLCJmMDIzZmQ4MS1hNjM3LTRiNTYtOTVmZC03OTFhYzAyMjYwMzMiLCJmMmVmOTkyYy0zYWZiLTQ2YjktYjdjZi1hMTI2ZWU3NGM0NTEiLCIyOTIzMmNkZi05MzIzLTQyZmQtYWRlMi0xZDA5N2FmM2U0ZGUiLCI2MmU5MDM5NC02OWY1LTQyMzctOTE5MC0wMTIxNzcxNDVlMTAiLCI3Mjk4MjdlMy05YzE0LTQ5ZjctYmIxYi05NjA4ZjE1NmJiYjgiLCIyNzQ2MDg4My0xZGYxLTQ2OTEtYjAzMi0zYjc5NjQzZTVlNjMiLCJiNzlmYmY0ZC0zZWY5LTQ2ODktODE0My03NmIxOTRlODU1MDkiXX0.ErKI6fRszyTYdFBetkTJQyj1iR5fIroOaIROCUysUhDZ451jG0eBkMcbDKTbOOqgnUcDhxUVR9YvM9opC39zh-bmHRfPiXVMa4X8wl2oBSoyUBTBnXPMaCMoMFWWQIwWC6D3dGtJgOzEPtsAP5kb76fWvLu5qyhe4qjIyMDp4QO07sUmV1zqm_1Jp0k1yBqimbx6yUgwILKOYBOJkNNc82s23BySZa7yLZFKK3Yoj6y6feCDS4vAJmu5UP94DHszczJ2S7078eI7S3r0QMgW5L5ArkQxRaHR9-mdne4aGD2vbHukmp1nl4XpUngHWUJOjg7Exy5h6qVv88wzJeP5wQ';
+        var powerBIAccessTokenExpiry = '2023-10-06 10:32:32Z';
+        var tenantId = '6c4f4ff2-8b02-42ef-845a-0cb058f70396';
+        var clusterUri =  'https://wabi-india-central-a-primary-redirect.analysis.windows.net/';
+
+        var powerbi = window.powerbi || {};
+        powerbi.session = {
+            userInfo: {
+                name:  'smita.bardhan@eistudy.onmicrosoft.com',
+                givenName: 'Smita',
+                surname: 'Bardhan',
+                puid: '10032002ADE876F7',
+                uoid: 'b6e8bf18-f6f0-4680-aa35-dc17df0ef5bf',
+                alternateEmail: '',
+                hasAutoAssignedLicense: false
+            }
+        };
+    
+</script>
+    <script>
+        // If load message arrives before initializing embed router, just save the params in postMessage handler below.
+        var loadReportParameters;
+        var createReportParameters;
+        var showSignInParameters;
+        var frontloadParameters;
+
+        var enableAccessTokenCheckForSecureEmbed = true;
+
+        window.markMessageAsHandled = function(request) {
+            request.headers = request.headers || {};
+            var handled = request.headers['handled'];
+            if (handled) {
+                // no changes
+                return false;
+            }
+
+            request.headers["handled"] = "true";
+            return true;
+        };
+    </script>
+    <script>
+        var viewLoadingStarted = Date.now();
+        var bootstrapIsUsed = false;
+        var bootstrapIsDone = false;
+
+
+        function updateLoadTimestamp(messageData) {
+            bootstrapIsUsed = messageData.headers && messageData.headers['bootstrapped'];
+            if (bootstrapIsUsed && bootstrapIsDone) {
+                viewLoadingStarted = Date.now();
+            }
+        }
+
+
+
+        var isSaasOrPaasEmbed = true;
+        var isSecurePublishToWeb = false;
+        var uid = '' || 'defaultId';
+        var sdkSessionId;
+        var sdkVersion;
+        var sdkType;
+        var performanceOptimization = '' ;
+        var registerQueryCallback = '' === "true";
+        var globalUseNativePromise = 'false';
+        var layoutTheme = 'fluent-no-header-teal';
+        var embeddedDemo = 'false' === "true";
+
+        // A promise that will be resolved once we have the telemetry routing info from the BE.
+        // AppInsights waits for this promise before initialization.
+        var clientTelemetryResolutionPromise = new Promise(function (resolve) {
+                window.clientTelemetryResolutionPromiseFunction = resolve;
+        });
+
+            
+        function autoAuthEnabled() {
+            return "true".toLowerCase() === "true";
+        }
+    
+
+
+        //register for messages from parent window
+        if (autoAuthEnabled()) {
+            isSecurePublishToWeb = true;
+            window.addEventListener('storage', storageEventHandler, false);
+
+            window.addEventListener('DOMContentLoaded', function() {
+                if (window.clientAuthEnabled && window.clientAuthSecureEmbedEnabled) {
+                    // we cannot auth here as this might happen inside iframe so we have to wait until we auth in separate tab
+                    // then we do signIn() to verify that token is valid and not expired
+                    if(window.clientAuthProvider.isSignedIn() || !window.clientAuthProvider.isInIframe()) {
+                       window.clientAuthProvider.signIn().then(showSignInOnContentLoaded);
+                    } else {
+                        showSignInOnContentLoaded();
+                    }
+                } else {
+                    showSignInOnContentLoaded();
+                }
+            });
+        } else {
+            window.addEventListener('message', receiveMessage, false);
+        }
+
+        function showSignInOnContentLoaded() {
+            // The showSignIn logic needs the scripts to be loaded, so we need to wait on DOMContentLoaded.
+            if (autoAuthEnabled()) {
+                isSaasOrPaasEmbed = false;
+
+                window.showSignInParameters = {
+                    accessToken: powerBIAccessToken,
+                    reportId: "7559bf86-dfe1-4466-a52d-b3c4f50dc2f6"
+                };
+
+                if (window.showSignIn) {
+                    window.showSignIn(showSignInParameters);
+                }
+            }
+        }
+
+        function storageEventHandler(evt) {
+            switch(evt.key) {
+                case 'accessTokenLastRefreshTime':
+                    let ctIdFromQueryString = "6c4f4ff2-8b02-42ef-845a-0cb058f70396";
+
+
+                    let ctIdFromLocalStorage = localStorage.getItem('ctId');
+
+
+                   const isUrlWithoutCtId = isNullOrUndefinedOrWhiteSpaceString(ctIdFromQueryString)
+                                               && isNullOrUndefinedOrWhiteSpaceString(ctIdFromLocalStorage);
+
+                    // For embed urls with CtId
+                    // The access token will be w.r.t the ctid which can be home tenant or guest tenant
+                    const isUrlWithCtId = !isNullOrUndefinedOrWhiteSpaceString(ctIdFromQueryString)
+                                            && !isNullOrUndefinedOrWhiteSpaceString(ctIdFromLocalStorage)
+                                            && window.location.href.indexOf(ctIdFromLocalStorage) > -1;
+
+                    if (isUrlWithCtId || isUrlWithoutCtId) {
+                        location.reload();
+                    }
+            }
+        }
+
+        function isNullOrUndefinedOrWhiteSpaceString(str) {
+            return !str || str.trim() === '';
+        }
+
+        var isMobile = '' == "true";
+
+        function startFrontLoadReportEmbed(config) {
+            // Disable front-load in auto auth mode.
+            if (autoAuthEnabled()) {
+                return;
+            }
+
+            if (performanceOptimization === "false") {
+                return;
+            }
+
+            // Front load report embed: resolveCluster, modelsAndExploration and conceptualSchema requests will be sent in parallel
+            // to scripts download to improve report embed performance.
+            // The promises will replace HttpService calls.
+
+            // Set groupId for front load. for folders use empty groupId
+            if ('' == '2') {
+                config.groupId = "";
+            } else {
+                config.groupId = (config.groupId == null || config.groupId == "") ? '' : config.groupId;
+            }
+
+            if (config.type === "report") {
+                // Initiate promises
+                modelsAndExplorationPromise = defer();
+                conceptualSchemaPromise = defer();
+            }
+
+            trySetClusterUrlFromToken(config);
+            if (embedUrlConfig.clusterUrl == null || embedUrlConfig.clusterUrl == "") {
+                resolveClusterPromise = defer();
+                resolveCluster(config, getModelsAndExplorationAndConceptualSchema);
+            } else {
+                getModelsAndExplorationAndConceptualSchema(config, embedUrlConfig.clusterUrl);
+            }
+        }
+
+        //handle message from parent window
+        function receiveMessage(event) {
+            if (event.data) {
+                try {
+                    var messageData;
+                    try {
+                        messageData = JSON.parse(event.data);
+                    } catch (e) {
+                        messageData = event.data;
+                    }
+
+                    if (messageData.headers && Object.keys(messageData.headers).length > 0) {
+                        uid = messageData.headers['uid'];
+                        sdkSessionId = messageData.headers['sdkSessionId'];
+                        sdkVersion = messageData.headers['x-sdk-version'];
+                        sdkType = messageData.headers['x-sdk-type'];
+                    }
+
+                    // if the reportController is initalized and the message is in the new format,
+                    // loadReport event will be handled by hostCommunicationHelper
+                    if (messageData.action === 'loadReport') {
+                        // Legacy embed PostMessage handling
+
+                        window.loadReportParameters = {
+                            accessToken: messageData.accessToken,
+                            id: messageData.reportId,
+                            uid: uid,
+                            phasedRender: false,
+                            additionalODataFilter: messageData.oDataFilter,
+                        };
+
+                        if (window.loadReport) {
+                            window.loadReport(window.loadReportParameters);
+                        }
+                    } else if (messageData.method === 'POST' && (messageData.url === '/report/load' || messageData.url === '/report/prepare')) {
+                        if (!window.markMessageAsHandled(messageData)) {
+                            // Message is already handled.
+                            return;
+                        }
+
+                        updateLoadTimestamp(messageData);
+
+                        window.loadReportParameters = messageData.body;
+                        window.loadReportParameters.uid = uid;
+                        if (messageData.url === '/report/prepare')
+                        {
+                            window.loadReportParameters.phasedRender = true;
+                        }
+
+                        if (window.loadReport) {
+                            window.loadReport(window.loadReportParameters);
+                        }
+                    } else if (messageData.method === 'POST' && messageData.url === '/report/create') {
+                        if (!window.markMessageAsHandled(messageData)) {
+                            // Message is already handled.
+                            return;
+                        }
+
+                        updateLoadTimestamp(messageData);
+
+                        window.createReportParameters = messageData.body;
+                        window.createReportParameters.uid = uid;
+
+                        if (window.createReport) {
+                            window.createReport(window.createReportParameters);
+                        }
+                    }
+
+                    if (messageData.method === 'POST' && messageData.url === '/frontload/config') {
+                        // Frontload config is sent after Powerbi-Javascript receive the ready post message
+                        frontloadParameters = messageData.body;
+                        startFrontLoadReportEmbed(frontloadParameters);
+                    }
+                }
+                catch (e) {
+                    var embedReportLoadMessage = {
+                        event: 'error',
+                        error: 'Invalid message data:'+ e.message,
+                    };
+                    window.parent.postMessage(JSON.stringify(embedReportLoadMessage), '*');
+                    return;
+                }
+            }
+        }
+        var baseUrl = window.location.protocol + '//' + window.location.host;
+        var powerbi = window.powerbi || {};
+        powerbi.telemetrySamplingRules = 'embed';
+        powerbi.build = '13.0.21669.112';
+        powerbi.buildDetails = '13.0.21669.112';
+        powerbi.clientVersion = '2309.4.15949-train';
+        powerbi.cvUrl = 'https://pbivisuals.powerbi.com';
+        powerbi.visualCDNBlobContainerUrl = 'prod';
+        powerbi.common = {};
+        powerbi.common.cultureInfo = 'en-US';
+        powerbi.common.unmappedCultureInfo = 'en-US';
+        powerbi.common.formattingLocale = 'en-US';
+        var useCDN = 'True';
+        var cdnUrl = 'https://content.powerapps.com/resource/powerbiwfe';
+        var previousTenantId = '';
+        var telemetrySessionId = 'fdb9d3b7-8745-4ce7-8fd0-8f26066dbb53';
+        var sessionSource = "Embed";
+        var wfeClusterName = 'app-PBI-WFE-INDIA-WEST';
+        var allowTelemetry = true;
+        var appInsightsV2InstrKey = 'e43fee4d-90d5-4c2a-a681-cffdd604ad5c';
+        var appInsightsV2EndpointUrl = '';
+        var initialDashboardContainer = undefined;
+        var appLoadError = undefined;
+        var isAdmin = "" === "true" ? true : false;
+    </script>
+
+
+
+    <link rel="stylesheet" href="https://content.powerapps.com/resource/powerbiwfe/styles/reportembed.bundle.min.e37d5aad226edda05933.css" onerror=cdnFallback(event) />
+
+    <script>
+
+
+        var isPrivateLinkHeaderPresent = false;
+        var embedUrlConfig = {"clusterUrl":null,"embedFeatures":null};
+
+        // In PL scenarios, override the cluster with the API Url present in WFE Manifests (Typically api.powerbi.com)
+        embedUrlConfig.clusterUrl = isPrivateLinkHeaderPresent ? 'https://api.powerbi.com'
+         : ''
+
+        ClusterExtractionFromTokenErrors = {
+            SinglePartToken: 'SinglePartToken',
+            FailedToDecodeTokenPart: 'FailedToDecodeTokenPart',
+            FailedToParseConfig: 'FailedToParseConfig',
+            NoClusterUrlInConfig: 'NoClusterUrlInConfig',
+        };
+
+        var shouldUseClusterUrlFromEmbedToken = function(isPrivateLinksEnabledForISV, isAccessOverPublicInternetAllowedForISV)
+        {
+
+            if (window.isPrivateLinkHeaderPresent &&
+                isPrivateLinksEnabledForISV && isAccessOverPublicInternetAllowedForISV === false)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        // TODO: Task 231825: Use typescript in cshtml code
+        var tryExtractClusterConfigFromEmbedToken = function(embedToken, isFrontLoad) {
+
+            // Skip if the cluster has already been extracted from the token.
+            // The return value indicates that the cluster extraction happened (success or failure).
+            if (window.clusterExtractionResult) {
+                return window.clusterExtractionResult;
+            }
+
+            // Embed tokens are generated with additional data separated by a '.'.
+            // The additional data is for client usage and should not be sent in the request header.
+            var clusterExtractionResult = {
+                clusterUrl: undefined,
+                isPrivateLinksEnabledForISV: undefined,
+                isAccessOverPublicInternetAllowedForISV: undefined,
+                isFrontLoad: isFrontLoad,
+            };
+
+            // Split token in 2 parts
+            var embedTokenParts = embedToken.split('.');
+
+            // Check if 2nd part exists
+            if (embedTokenParts.length < 2) {
+                clusterExtractionResult.error = ClusterExtractionFromTokenErrors.SinglePartToken;
+                return clusterExtractionResult;
+            }
+
+            // Try to decode base64
+            try {
+                var base64Decoded = atob(embedTokenParts[1]);
+            } catch(ex) {
+                clusterExtractionResult.error = ClusterExtractionFromTokenErrors.FailedToDecodeTokenPart;
+                return clusterExtractionResult;
+            }
+
+            // Parse decoded string
+            var embedTokenAdditionalConfig;
+            try {
+                embedTokenAdditionalConfig = JSON.parse(base64Decoded);
+            } catch(ex) {
+                clusterExtractionResult.error = ClusterExtractionFromTokenErrors.FailedToParseConfig;
+                return clusterExtractionResult;
+            }
+
+            // Extract token
+            var clusterUrlInToken = embedTokenAdditionalConfig.clusterUrl;
+            if (clusterUrlInToken == null) {
+                clusterExtractionResult.error = ClusterExtractionFromTokenErrors.NoClusterUrlInConfig;
+                return clusterExtractionResult;
+            };
+
+            clusterExtractionResult.clusterUrl = clusterUrlInToken;
+            clusterExtractionResult.isPrivateLinksEnabledForISV = !!embedTokenAdditionalConfig.privateLinksEnabled;
+            clusterExtractionResult.isAccessOverPublicInternetAllowedForISV = !!embedTokenAdditionalConfig.allowAccessOverPublicInternet;
+            return clusterExtractionResult;
+        };
+    </script>
+
+
+        <script>
+        var resolveClusterPromise;
+
+        var clusterResolutionFrontLoadStartTime = null;
+        var clusterResolutionFrontLoadEndTime = null;
+
+        const tokenPrefix = ['Bearer ', 'EmbedToken '];
+        const unknownErrorCode = 500;
+        const resolveClusterPrefix = "resolveCluster";
+        const myWorkspaceFolderId = 'me';
+
+        function resolveCluster(config, nextFrontloadCall) {
+            try {
+                clusterResolutionFrontLoadStartTime = Date.now();
+                var activityId = telemetrySessionId;
+                var requestId = 'ccef3b91-6d22-498a-96a4-2f75601f7bc6';
+
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    try {
+                        var status = xhr.status;
+                        if (xhr.readyState == XMLHttpRequest.DONE) {
+                            clusterResolutionFrontLoadEndTime = Date.now();
+                            if (isSuccess(status)) {
+                                var response = xhrBuildResponse(xhr, activityId, requestId);
+                                if (response.data.clusterUrl || response.data.backendUrl) {
+                                    resolvedClusterUri = response.data.clusterUrl || response.data.backendUrl;
+                                    resolveClusterPromise.resolve(response);
+                                    nextFrontloadCall(config, resolvedClusterUri);
+                                } else {
+                                    resolveClusterPromise.reject(buildExceptionResponse(activityId, requestId, {message: "clusterUrl and backendUrl are empty"}, resolveClusterPrefix));
+                                }
+                            } else {
+                                try {
+                                    resolveClusterPromise.reject(xhrBuildResponse(xhr, activityId, requestId, true /*isError*/));
+                                }
+                                catch (e) {
+                                    console.error("error while rejecting promise: " + e);
+                                    // Cannot parse an error out of the response
+                                    resolveClusterPromise.reject(buildExceptionResponse(activityId, requestId, e, resolveClusterPrefix));
+                                }
+                            }
+                        }
+                    }
+                    catch (e) {
+                        console.error(e);
+                        resolveClusterPromise.reject(buildExceptionResponse(activityId, requestId, e, resolveClusterPrefix));
+                    }
+                }
+
+                var url;
+                if (isSaaSEmbedWithAADToken(config)) {
+                    url = clusterUri + "/powerbi/globalservice/v201606/clusterdetails";
+                }
+                else {
+                    url = clusterUri + "/metadata/cluster";
+                }
+
+                xhr.open("GET", url);
+                setGETRequestHeaders(xhr, telemetrySessionId, requestId, config);
+                xhr.send();
+            }
+            catch (e) {
+                console.error(e);
+                resolveClusterPromise.reject(buildExceptionResponse(activityId, requestId, e, resolveClusterPrefix));
+            }
+        }
+
+        function trySetClusterUrlFromToken(config) {
+            if (config.tokenType == 1 /*EmbedToken*/)
+            {
+                window.clusterExtractionResult = tryExtractClusterConfigFromEmbedToken(config.accessToken, true /* isFrontLoad */);
+                
+                // Override embed url config's clusterUrl with clusterUrl extracted from token since it might be more accurate
+                if (window.clusterExtractionResult &&
+                    window.clusterExtractionResult.clusterUrl &&
+                    shouldUseClusterUrlFromEmbedToken(window.clusterExtractionResult.isPrivateLinksEnabledForISV, window.clusterExtractionResult.isAccessOverPublicInternetAllowedForISV))
+                {
+                    embedUrlConfig.clusterUrl = window.clusterExtractionResult.clusterUrl;
+                }
+            }
+        }
+
+        function setGETRequestHeaders(xhr, activityId, requestId, config) {
+            xhr.setRequestHeader('Accept', 'application/json');
+            xhr.setRequestHeader('ActivityId', activityId);
+            xhr.setRequestHeader('RequestId', requestId);
+
+            // Default token type is Aad (0)
+            var tokenType = config.tokenType || 0;
+            xhr.setRequestHeader('Authorization', tokenPrefix[tokenType] + config.accessToken);
+            if (isSaaSEmbedWithAADToken(config))
+                xhr.setRequestHeader('X-PowerBI-HostEnv', 'Embed for Organization');
+            else
+                xhr.setRequestHeader('X-PowerBI-HostEnv', 'Embed for Customers');
+            if (config.tenantVerification)
+                xhr.setRequestHeader('X-PowerBI-Tenant-Verification', config.tenantVerification);
+            if (config.type === 'quickCreate') {
+                xhr.setRequestHeader('X-PowerBI-Auto-License-Info', 'AutoLicenseAssignmentSupported');
+            }
+        }
+
+        function setGETRequestHeadersWithGroupId(xhr, activityId, requestId, config) {
+            setGETRequestHeaders(xhr, activityId, requestId, config);
+
+            if (config.groupId && config.groupId !== myWorkspaceFolderId)
+                xhr.setRequestHeader('X-PowerBI-User-GroupId', config.groupId);
+        }
+
+        function setPOSTRequestHeaders(xhr, activityId, requestId, config) {
+            setGETRequestHeaders(xhr, activityId, requestId, config);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            if (config.groupId && config.groupId !== myWorkspaceFolderId)
+                xhr.setRequestHeader('X-PowerBI-User-GroupId', config.groupId);
+        }
+
+        function isSaaSEmbedWithAADToken(config) {
+            // Default token type is Aad (0)
+            const tokenType = config.tokenType || 0;
+            return (window.isSaasOrPaasEmbed === true) && (tokenType === 0);
+        }
+
+        function defer() {
+            var res, rej;
+
+            var promise = new Promise(function (resolve, reject) {
+                res = resolve;
+                rej = reject;
+            });
+
+            promise.resolve = function (result) {
+                res(result);
+            };
+
+            promise.reject = function (error) {
+                rej(error);
+            };
+
+            return promise;
+        }
+
+        // we need to fill in an object that looks like IHttpResult from Typings\iHttpService.d.ts
+        function xhrBuildResponse(xhr, activityId, requestId, isError) {
+            const headerMap = {};
+
+            try {
+                // instructions to extract headers here: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/getAllResponseHeaders
+                // Get the raw header string
+                const headers = xhr.getAllResponseHeaders();
+
+                // Convert the header string into an array
+                // of individual headers
+                const arr = headers.trim().split(/[\r\n]+/);
+
+                // Create a map of header names to values
+                arr.forEach((line) => {
+                    const parts = line.split(": ");
+                    const header = parts.shift();
+                    const value = parts.join(": ");
+                    headerMap[header] = value;
+                });
+            }
+            catch(e) {
+                console.error("error parsing request headers: " + e);
+            }
+
+            var response = {
+                activityId: activityId,
+                requestId: requestId,
+                status: xhr.status,
+                headers: (headerName) => headerMap[headerName],
+            };
+
+            xhrResponse = xhr.response && JSON.parse(xhr.response);
+            if (!isError)
+                response["data"] = xhrResponse;
+            else
+                response["error"] = xhrResponse && xhrResponse.error;
+
+            return response;
+        }
+
+        function buildExceptionResponse(activityId, requestId, exception, prefix, status) {
+            return {
+                activityId: activityId,
+                requestId: requestId,
+                status: status || unknownErrorCode,
+                error: {
+                    message: prefix + " Exception: " + exception.message,
+                    code: "FrontLoadException",
+                },
+            }
+        }
+
+        function isSuccess(status) {
+            return status >= 200 && status < 300;
+        }
+    </script>
+
+        <script>
+        var modelsAndExplorationPromise;
+        var conceptualSchemaPromise;
+        var conceptualSchemaRequestId;
+        var conceptualSchemaResponse;
+
+        var modelsAndExplorationFrontLoadStartTime = null;
+        var modelsAndExplorationFrontLoadEndTime = null;
+        var conceptualSchemaFrontLoadStartTime = null;
+        var conceptualSchemaFrontLoadEndTime = null;
+
+        const modelsAndExplorationPrefix = "modelsAndExploration";
+        const conceptualSchemaPrefix = "conceptualSchema";
+
+        function getModelsAndExploration(config, resolvedClusterUri) {
+            if (!modelsAndExplorationPromise || !config.id || config.id.indexOf("-") === -1) {
+                // This happens in cases where getModelsAndExploration is not needed, like QnA embed.
+                return;
+            }
+
+            try {
+                modelsAndExplorationFrontLoadStartTime = Date.now();
+                var activityId = telemetrySessionId;
+                var requestId = 'bfa065d2-4297-46e6-b420-13f53b1db75f';
+                url = resolvedClusterUri + "/explore/reports/" + config.id + `/modelsAndExploration?preferReadOnlySession=true${window.isMobile ? '&mobileStateEnabled=true': ''}`;
+                if (config.datasetBinding && config.datasetBinding.datasetId) {
+                    url += "&datasetObjectId=" + config.datasetBinding.datasetId;
+                }
+
+                url += "&skipQueryData=true";
+
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    try {
+                        var status = xhr.status;
+                        if (xhr.readyState == XMLHttpRequest.DONE) {
+                            modelsAndExplorationFrontLoadEndTime = Date.now();
+                            if (isSuccess(status)) {
+                                var response = xhrBuildResponse(xhr, activityId, requestId);
+                                modelsAndExplorationPromise.resolve(response);
+                                modelsAndExplorationRequestId = requestId;
+                            } else {
+                                if (modelsAndExplorationPromise) {
+                                    try {
+                                        modelsAndExplorationPromise.reject(xhrBuildResponse(xhr, activityId, requestId, true /*isError*/));
+                                    }
+                                    catch (e) {
+                                        console.error(e);
+                                        // Cannot parse an error out of the response
+                                        modelsAndExplorationPromise.reject(buildExceptionResponse(activityId, requestId, e, modelsAndExplorationPrefix, status));
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    catch (e) {
+                        console.error(e);
+                        if (modelsAndExplorationPromise) {
+                            modelsAndExplorationPromise.reject(buildExceptionResponse(activityId, requestId, e, modelsAndExplorationPrefix));
+                        }
+                    }
+                }
+
+                xhr.open("GET", url);
+                setGETRequestHeadersWithGroupId(xhr, telemetrySessionId, requestId, config);
+                xhr.send();
+            }
+            catch (e) {
+                console.error(e)
+                if (modelsAndExplorationPromise) {
+                    modelsAndExplorationPromise.reject(buildExceptionResponse(activityId, requestId, e, modelsAndExplorationPrefix));
+                }
+            }
+        }
+
+        function getConceptualSchema(config, resolvedClusterUri, modelsAndExploration) {
+            if (!conceptualSchemaPromise) {
+                // This happens in cases where getConceptualSchema is not needed, like QnA embed.
+                return;
+            }
+
+            try {
+                conceptualSchemaFrontLoadStartTime = Date.now();
+
+                var activityId = telemetrySessionId;
+                var requestId = 'b2c3ca55-d94b-4862-b55f-48e363218ba4';
+
+                var xhr = new XMLHttpRequest();
+                xhr.onreadystatechange = function() {
+                    try {
+                        conceptualSchemaFrontLoadEndTime = Date.now();
+                        var status = xhr.status;
+                        if (xhr.readyState == XMLHttpRequest.DONE) {
+                            if (isSuccess(status)) {
+                                var data = JSON.parse(xhr.responseText);
+                                conceptualSchemaDuration = conceptualSchemaFrontLoadEndTime - conceptualSchemaFrontLoadStartTime;
+                                conceptualSchemaRequestId = requestId;
+
+                                var schemas;
+                                if (data.schemas) {
+                                    // Get schemas by model Id return an array of schemas in schemas property.
+                                    schemas = data.schemas;
+                                } else {
+                                    // Get schema by report Id returns only one schema - which is the response body.
+                                    // Add schema to an array in order to run successfully in the same flow as get schemas by model Id.
+                                    schemas = [data];
+                                }
+
+                                if (conceptualSchemaPromise){
+                                    conceptualSchemaPromise.resolve({
+                                    schemas: schemas,
+                                    requestId: requestId
+                                    });
+                                }
+                            } else if (conceptualSchemaPromise){
+                                try {
+                                    var error = JSON.parse(xhr.response);
+                                        conceptualSchemaPromise.reject({
+                                            requestId: requestId,
+                                            error: error,
+                                            status: xhr.status,
+                                            schemas: undefined,
+                                        });
+                                }
+                                catch (e) {
+                                    console.error(e);
+                                    // Cannot parse an error out of the response
+                                    conceptualSchemaPromise.reject(buildExceptionResponse(activityId, requestId, e, conceptualSchemaPrefix, status));
+                                }
+                            }
+                        }
+                    }
+                    catch (e) {
+                        console.error(e);
+                        if (conceptualSchemaPromise && conceptualSchemaPromise.reject) {
+                            conceptualSchemaPromise.reject(buildExceptionResponse(activityId, requestId, e, conceptualSchemaPrefix));
+                        }
+                    }
+                }
+
+                const userPreferredLocale = powerbi.common.unmappedCultureInfo;
+
+                // Request should be:
+                // GET /explore/reports/<report guid>/conceptualschema.
+                if (config.datasetBinding && config.datasetBinding.datasetId) {
+                    url = resolvedClusterUri + "/explore/conceptualschema";
+                    var data = JSON.stringify({
+                        ModelObjectIds: [config.datasetBinding.datasetId],
+                        userPreferredLocale: userPreferredLocale
+                    });
+
+                    xhr.open("POST", url);
+                    setPOSTRequestHeaders(xhr, telemetrySessionId, requestId, config);
+                    xhr.send(data);
+                } else if (config.id && config.id.indexOf("-") !== -1){
+                    url = resolvedClusterUri + "/explore/reports/" + config.id + "/conceptualschema?userPreferredLocale=" + userPreferredLocale;
+                    xhr.open("GET", url);
+                    setGETRequestHeadersWithGroupId(xhr, telemetrySessionId, requestId, config);
+                    xhr.send();
+                }
+            } catch (e) {
+                console.error(e);
+                if (conceptualSchemaPromise) {
+                    conceptualSchemaPromise.reject(buildExceptionResponse(activityId, requestId, e, conceptualSchemaPrefix));
+                }
+            }
+        }
+
+        function getModelsAndExplorationAndConceptualSchema(config, resolvedClusterUri) {
+            getModelsAndExploration(config, resolvedClusterUri);
+            getConceptualSchema(config, resolvedClusterUri, null /* modelsAndExplorationResponse */);
+        }
+    </script>
+
+    <script>
+        certifiedTelemetryEmbed = true;
+        usageMetricsVNext = embedUrlConfig && embedUrlConfig.embedFeatures && embedUrlConfig.embedFeatures.usageMetricsVNext;
+        var powerBISpinnerImprovements = true;
+    </script>
+</head>
+<body>
+    <div id="pbiLoadingPlaceholder" class="displayNone">
+        <div id="pbi-svg-loading" class="wfe-loading"><div class="pbi-svg-item"><img alt="Power BI loading" src="https://content.powerapps.com/resource/powerbiwfe/images/spinner-PBI-logo.6434e0fca135a582c323.svg" width="61" height="81"/><div class="shine"></div></div></div>
+    </div>
+
+    <div id='pbiAppPlaceHolder' style="height: 100%">
+        <!-- check for login as a part of loading report embed controller -->
+        <report-embed></report-embed>
+    </div>
+
+    <script>
+        // 'pbiLoadingPlaceholder' acts as a wrapper and is displayed only when scripts are enabled.
+        // This makes sure loading screen is displayed only if scripts are enabled.
+        // If scripts are disabled the 'noscript' tag is displayed with the error message
+        var pbiLoadingPlaceholderElement = document.querySelector('#pbiLoadingPlaceholder');
+        pbiLoadingPlaceholderElement.classList.remove('displayNone');
+
+        if (uid !== 'defaultId') {
+            // Ready message is sent to the Powerbi-Javascript, in order to start report embed front load
+            window.parent.postMessage({method: "POST", url: '/ready/' + uid}, '*');
+        }
+    </script>
+
+    <script> function cdnFallback(event) {var date = new Date(); var failedRequestUrl = 'unknown'; var sessionSource = 'unknown'; var statusCode = 'unknown'; var durationMs = 'unknown'; var maxAgeInSeconds = 8 * 60 * 60;if (event && event.currentTarget && event.currentTarget.src) {failedRequestUrl = event.currentTarget.src;}if (failedRequestUrl && typeof this.performance.getEntriesByName === 'function' && this.performance.getEntriesByName(failedRequestUrl)[0]) {statusCode = this.performance.getEntriesByName(failedRequestUrl)[0].responseStatus;durationMs = this.performance.getEntriesByName(failedRequestUrl)[0].duration;}sessionSource = false ? '' : window.sessionSource;try { document.cookie = 'disablecdn=cdnRequestFailureTimestamp:' + date.toUTCString() + '-cdnRequestFailureUrl:' + failedRequestUrl + '-sessionSource:' + sessionSource + '-statusCode:' + statusCode + '-durationMs:' + durationMs + '; max-age=' + maxAgeInSeconds + '; secure';} catch (err) {}if (true) { var newUrl = new URL(window.location.href);newUrl.searchParams.set('disablecdnExpiration', String(Math.round(new Date() / 1000 + maxAgeInSeconds)));window.location.href = newUrl.href; } else { window.location.reload(true); } }</script>
+<script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {}; this.parseTimeMarkers['jquery.globalize/globalize.min.js'] = { nominalStart: Date.now(), start: Date.now(), initial: true }; </script>
+<script type="text/javascript" src="https://content.powerapps.com/resource/powerbiwfe/scripts/jquery.globalize/globalize.min.8e8ec43af69cf3d5d7aa.js" defer   onerror=cdnFallback(event) ></script>
+<script type="text/javascript">this.parseTimeMarkers['jquery.globalize/globalize.min.js'].end = Date.now();</script>
+<script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {}; this.parseTimeMarkers['jquery.globalize/globalize.culture.en-US.js'] = { nominalStart: Date.now(), start: Date.now(), initial: true }; </script>
+<script type="text/javascript" src="https://content.powerapps.com/resource/powerbiwfe/scripts/jquery.globalize/globalize.culture.en-US.07ca294f77f622a072a5.js" defer   onerror=cdnFallback(event) ></script>
+<script type="text/javascript">this.parseTimeMarkers['jquery.globalize/globalize.culture.en-US.js'].end = Date.now();</script>
+    <script>
+
+        powerbi.common.localizedStrings = '';
+    </script>
+<script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {}; this.parseTimeMarkers['hash-manifest.js'] = { nominalStart: Date.now(), start: Date.now(), initial: true }; </script>
+<script type="text/javascript" src="13.0.21669.112/scripts/hash-manifest.js" defer   onerror=cdnFallback(event) ></script>
+<script type="text/javascript">this.parseTimeMarkers['hash-manifest.js'].end = Date.now();</script>
+<script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {}; this.parseTimeMarkers['reportembed.externals.bundle.min.js'] = { nominalStart: Date.now(), start: Date.now(), initial: true }; </script>
+<script type="text/javascript" src="https://content.powerapps.com/resource/powerbiwfe/scripts/reportembed.externals.bundle.min.801fb160ce0acd971fef.js" defer   onerror=cdnFallback(event) ></script>
+<script type="text/javascript">this.parseTimeMarkers['reportembed.externals.bundle.min.js'].end = Date.now();</script>
+<script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {}; this.parseTimeMarkers['stylelibrary.min.js'] = { nominalStart: Date.now(), start: Date.now(), initial: true }; </script>
+<script type="text/javascript" src="https://content.powerapps.com/resource/powerbiwfe/scripts/stylelibrary.min.7f7e9191ca6378e8a520.js" defer   onerror=cdnFallback(event) ></script>
+<script type="text/javascript">this.parseTimeMarkers['stylelibrary.min.js'].end = Date.now();</script>
+<script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {}; this.parseTimeMarkers['reportEmbed.vendors.min.js'] = { nominalStart: Date.now(), start: Date.now(), initial: true }; </script>
+<script type="text/javascript" src="https://content.powerapps.com/resource/powerbiwfe/scripts/reportEmbed.vendors.min.14bdde239c08b531ec69.js" defer   onerror=cdnFallback(event) ></script>
+<script type="text/javascript">this.parseTimeMarkers['reportEmbed.vendors.min.js'].end = Date.now();</script>
+<script type="text/javascript">this.parseTimeMarkers = this.parseTimeMarkers || {}; this.parseTimeMarkers['reportEmbed.min.js'] = { nominalStart: Date.now(), start: Date.now(), initial: true }; </script>
+<script type="text/javascript" src="https://content.powerapps.com/resource/powerbiwfe/scripts/reportEmbed.min.43017908f22df339d446.js" defer   onerror=cdnFallback(event) ></script>
+<script type="text/javascript">this.parseTimeMarkers['reportEmbed.min.js'].end = Date.now();</script>
+
+
+    <noscript>
+        <div class="noScriptContainer">
+            <section class="noScriptErrorContainer">
+                <span class="noScriptErrorText">The sandbox is too restrictive and preventing correct functioning.</span>
+            </section>
+        </div>
+    </noscript>
+
+    <script>
+        bootstrapIsDone = true;
+    </script>
+</body>
+</html>
